@@ -35,7 +35,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     
   }
-
+// if(this.id.value =='admin' && this.pwd.value == '1234'){
+    //   alert('로그인합니다!');
+    //   this.visible1 = true;
+    //   this.sendMyEvent.emit(this.visible1);  //app컴포넌트에 전달
   tryToLogin() : void{
     console.log(this.pwd)
     this.service.addData(true, {id:'admin', name:'사용자'});  //서비스에 addData 함수를 호출합니다.
