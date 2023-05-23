@@ -29,9 +29,11 @@ export class AppComponent {
   constructor(private service : MyServiceService){
     service.TV.subscribe( arg=>{
       if(arg && arg.id){
-        console.log('로그인이 성공했군요 : ',arg);
+        console.log('로그인에 성공하였습니다. : ',arg);
         this.loginBool = false;
         this.boardBool = true;
+      }else{
+        console.log('로그인에 실패하였습니다. :', arg)
       }
     });
 }

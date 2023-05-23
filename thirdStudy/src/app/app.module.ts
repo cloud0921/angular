@@ -4,7 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BoardComponent } from './board/board.component';
+import { RouterModule,Routes} from '@angular/router'; //라우터
 
+const router : Routes = [  //라우팅
+  {path : 'login' , component : LoginComponent},  
+  {path : 'board' , component : BoardComponent},
+  {path : '', redirectTo : '/login',  pathMatch : 'full'}
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +18,8 @@ import { BoardComponent } from './board/board.component';
     BoardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(router,{enableTracing:false}),
   ],
   providers: [],
   bootstrap: [AppComponent]

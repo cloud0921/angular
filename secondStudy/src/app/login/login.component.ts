@@ -41,7 +41,6 @@ export class LoginComponent implements OnInit {
     //   this.sendMyEvent.emit(this.visible1);  //app컴포넌트에 전달
   tryToLogin() : void{
     console.log(this.pwd)
-    this.service.addData(true, {id:'admin', name:'사용자'});  //서비스에 addData 함수를 호출합니다.
     if(this.id.value =='admin' && this.pwd.value == '1234'){
       alert('로그인합니다!');
       this.service.addData(true, {id:'admin', name:'사용자'});  //서비스에 addData 함수를 호출, 로그인 성공값을 전달 합니다.
