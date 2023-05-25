@@ -1,23 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello/hello.component';
-import { WorldComponent } from './world/world.component';
+import { TestComponent } from './test/test.component';
+import { AlertModule } from './alert/alert.module';
+import { FormsModule } from '@angular/forms';
+import { HelloworldDirective } from './helloworld.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent,
-    WorldComponent,
+    TestComponent,
+    HelloworldDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AlertModule,
     FormsModule
   ],
   providers: [],
