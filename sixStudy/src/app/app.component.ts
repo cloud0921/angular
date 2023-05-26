@@ -21,7 +21,7 @@ export class AppComponent {
   set mouseStatus(arg:any){  //마우스의 상태가 변화됨을 적용하는 함수 입니다.
     this.canElementMove = arg;
   }
-  getEvent(event: any) :  void{
+  getEvent(event: any) : void{
     if(this.canElementMove){
       console.log(event)
     }
