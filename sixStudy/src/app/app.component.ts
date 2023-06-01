@@ -10,7 +10,7 @@ import { my_check } from './my-check.directive';
 export class AppComponent {
   title = new FormControl('', my_check()); 
   position = {
-    left :  '0px',
+    left : '0px',
     top : '0px',
     width : '200px',
     height : '200px',
